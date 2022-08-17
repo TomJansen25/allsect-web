@@ -1,0 +1,20 @@
+[
+    {
+        "id": "about",
+        "name": "About",
+        "repeatable": false,
+        "value": "about.json"
+    },
+    {
+        "id": "post",
+        "name": "Post",
+        "repeatable": true,
+        "value": "post.json"
+    },
+    {
+        "id": "recipe",
+        "name": "Recipe",
+        "repeatable": true,
+        "value": "recipe.json"
+    }
+]

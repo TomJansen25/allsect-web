@@ -1,0 +1,212 @@
+{
+  "Blog Post" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "UID",
+        "placeholder" : "unique-identifier-for-blog-post-url"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title",
+        "placeholder" : "Blog Post Title..."
+      }
+    },
+    "subtitle" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading4",
+        "label" : "Subtitle"
+      }
+    },
+    "date" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "Date"
+      }
+    },
+    "tl_dr" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "TL;DR",
+        "placeholder" : "TL;DR"
+      }
+    },
+    "keywords_seo" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Keywords SEO",
+        "placeholder" : "mealworm, fun facts, interesting things"
+      }
+    },
+    "references" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,strong,em,hyperlink,embed,list-item,o-list-item,o-list-item",
+        "label" : "References",
+        "placeholder" : "links to references"
+      }
+    },
+    "tags" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Informative", "Tried & Tested", "Compared", "Fun facts", "Spotlight", "On the Menu" ],
+        "default_value" : "Informative",
+        "label" : "Tags",
+        "placeholder" : "choose tags"
+      }
+    },
+    "word_count" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Word Count",
+        "placeholder" : "1234"
+      }
+    },
+    "main_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1500
+        },
+        "thumbnails" : [ {
+          "name" : "thumbnail",
+          "width" : 300,
+          "height" : 300
+        } ],
+        "label" : "Main image"
+      }
+    },
+    "main_image_caption" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading6",
+        "label" : "Main image caption",
+        "placeholder" : "awesome text that goes with the image"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "image_with_caption" : [ {
+            "name" : "emphasized",
+            "display" : "Emphasized"
+          }, {
+            "name" : "image-full-width",
+            "display" : "Full"
+          } ]
+        },
+        "choices" : {
+          "text" : {
+            "type" : "Slice",
+            "fieldset" : "Text",
+            "description" : "A rich text section",
+            "icon" : "text_fields",
+            "non-repeat" : {
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,strong,em,hyperlink,embed,list-item,o-list-item,o-list-item",
+                  "allowTargetBlank" : true,
+                  "label" : "Text",
+                  "placeholder" : "Post text..."
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "quote" : {
+            "type" : "Slice",
+            "fieldset" : "Quote",
+            "description" : "A quote section",
+            "icon" : "format_quote",
+            "non-repeat" : {
+              "quote" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Quote",
+                  "placeholder" : "Post Quote..."
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "image_with_caption" : {
+            "type" : "Slice",
+            "fieldset" : "Image with Caption",
+            "description" : "An image with an optional caption",
+            "icon" : "image",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1200
+                  },
+                  "thumbnails" : [ {
+                    "name" : "thumbnail",
+                    "width" : 300,
+                    "height" : 300
+                  } ],
+                  "label" : "Image"
+                }
+              },
+              "caption" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Caption",
+                  "placeholder" : "Image Caption..."
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "image_gallery" : {
+            "type" : "Slice",
+            "fieldset" : "Image Gallery",
+            "description" : "Image Gallery with a title and a caption for each image",
+            "icon" : "photo_library",
+            "non-repeat" : {
+              "name_of_the_gallery" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Name of the gallery",
+                  "placeholder" : "My beautiful paintings"
+                }
+              }
+            },
+            "repeat" : {
+              "image_captions" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Image captions",
+                  "placeholder" : "Images captions"
+                }
+              },
+              "gallery_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : null,
+                    "height" : null
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Gallery Image"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
