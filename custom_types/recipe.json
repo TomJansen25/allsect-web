@@ -1,0 +1,180 @@
+{
+  "Recipe" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "uid",
+        "placeholder" : "unique-identifier-for-recipe-url"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "Recipe title",
+        "placeholder" : "Crispy cricket tacos"
+      }
+    },
+    "subtitle" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading5",
+        "label" : "Subtitle",
+        "placeholder" : "Creepy crawlers wrapped in Mexican flavours"
+      }
+    },
+    "date" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "date",
+        "placeholder" : "21-03-2020"
+      }
+    },
+    "prep_time" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Prep time",
+        "placeholder" : "30"
+      }
+    },
+    "servings" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Servings",
+        "placeholder" : "4"
+      }
+    },
+    "keywords_seo" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Keywords SEO",
+        "placeholder" : "Cricket recipe, roasted grasshoppers, cricket brownies"
+      }
+    },
+    "introduction" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,strong,em,hyperlink,embed",
+        "label" : "Introduction",
+        "placeholder" : "Living up a regular dish with crickets"
+      }
+    },
+    "recipe_cuisine" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "American", "Asian", "Australian", "British", "Chinese", "Dutch", "French", "German", "Indian", "Italian", "Japanese", "Mediterranean", "Mexican", "Romanian", "Thai", "World" ],
+        "default_value" : "American",
+        "label" : "Recipe Cuisine",
+        "placeholder" : "German"
+      }
+    },
+    "recipe_type" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Breakfast", "Sweet", "Snack", "Lunch", "Dinner", "Salad", "Side Dish", "Dessert" ],
+        "default_value" : "Breakfast",
+        "label" : "Recipe type",
+        "placeholder" : "Brekky, dinner, etc."
+      }
+    },
+    "insect_of_choice" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Cricket", "Grasshopper", "Mealworm", "Buffaloworm" ],
+        "default_value" : "Cricket",
+        "label" : "Insect of choice",
+        "placeholder" : "Cricket, grasshopper or worm"
+      }
+    },
+    "main_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1200
+        },
+        "thumbnails" : [ {
+          "name" : "thumbnail",
+          "width" : 300,
+          "height" : 300
+        } ],
+        "label" : "Main Image"
+      }
+    },
+    "ingredients" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item",
+        "allowTargetBlank" : true,
+        "label" : "ingredients",
+        "placeholder" : "ingredients in an unordered list"
+      }
+    },
+    "prep" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,heading4,heading5,heading6,strong,em,hyperlink,embed,o-list-item",
+        "allowTargetBlank" : true,
+        "label" : "prep",
+        "placeholder" : "steps to follow in an ordered list"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "ingredients" : [ ],
+          "image" : [ ],
+          "prep" : [ ],
+          "text" : [ ]
+        },
+        "choices" : {
+          "image" : {
+            "type" : "Slice",
+            "fieldset" : "Image",
+            "description" : "Recipe image",
+            "icon" : "image",
+            "display" : "grid",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1200,
+                    "height" : null
+                  },
+                  "thumbnails" : [ {
+                    "name" : "thumbnail",
+                    "width" : 300,
+                    "height" : 300
+                  } ],
+                  "label" : "image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "text" : {
+            "type" : "Slice",
+            "fieldset" : "Text",
+            "description" : "Rich Text Section",
+            "icon" : "text_fields",
+            "non-repeat" : {
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+                  "allowTargetBlank" : true,
+                  "label" : "text",
+                  "placeholder" : "Your content here"
+                }
+              }
+            },
+            "repeat" : { },
+            "display" : "grid"
+          }
+        }
+      }
+    }
+  }
+}
