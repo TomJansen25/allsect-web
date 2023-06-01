@@ -21,6 +21,7 @@
     "@mui/material": "^5.11.13",
     "@prismicio/react": "^2.5.2",
     "@prismicio/richtext": "^2.1.4",
+    "@sendgrid/mail": "^7.7.0",
     "algoliasearch": "^4.16.0",
     "babel-plugin-styled-components": "^2.0.7",
     "dotenv": "^16.0.3",

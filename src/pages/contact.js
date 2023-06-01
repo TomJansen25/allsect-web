@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TextField, Backdrop, CircularProgress, Snackbar, Alert, Container } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
 // import emailjs from "emailjs-com"
+import axios from "axios";
 import styled from "styled-components";
 import { MailSend } from "styled-icons/remix-fill"
 // import { Error } from "styled-icons/material-twotone"
@@ -31,7 +32,7 @@ const ContactForm = () => {
     const [message, setMessage] = useState("")
     const [loading, setLoading] = useState(false)
     const [snackbarOpen, setSnackbarOpen] = useState(false)
-    const [snackbarSeverity, setSnackbarSeverity] = useState("")
+    const [snackbarSeverity, setSnackbarSeverity] = useState("success")
     const [snackbarMessage, setSnackbarMessage] = useState("")
 
     const resetForm = () => {
@@ -43,22 +44,25 @@ const ContactForm = () => {
     const sendEmail = (e) => {
         e.preventDefault()
         setLoading(true)
-        /*
-        const templateParams = {
-            name: name,
-            email: email,
-            message: message,
-        }
-        
-        emailjs
-            .send(
-                "personal_mail",
-                "info_allsect_mails",
-                templateParams,
-                "user_qg2kFBBpprPxwffTaPbFZ"
+        axios
+            .post(
+                "/api/mail",
+                {
+                    mailTo: "allsect.info@gmail.com",
+                    mailFrom: email,
+                    name: name,
+                    message: message
+                },
+                {
+                    headers: {
+                        "Access-Control-Allow-Origin": "*",
+                        "Content-Type": "application/json"
+                    }
+                }
             )
-            .then(
-                (result) => {
+            .then((res) => {
+                if (res.status === 200) {
+                    console.log(res.data)
                     setLoading(false)
                     setSnackbarSeverity("success")
                     setSnackbarMessage(
@@ -66,8 +70,7 @@ const ContactForm = () => {
                     )
                     setSnackbarOpen(true)
                     resetForm()
-                },
-                (error) => {
+                } else {
                     setLoading(false)
                     setSnackbarSeverity("error")
                     setSnackbarMessage(
@@ -76,15 +79,17 @@ const ContactForm = () => {
                     setSnackbarOpen(true)
                     resetForm()
                 }
-            )
-        */
-        setLoading(false)
-        setSnackbarSeverity("error")
-        setSnackbarMessage(
-            "Unfortunately something went wrong, please try to send us a message again."
-        )
-        setSnackbarOpen(true)
-        resetForm()
+            })
+            .catch((err) => {
+                console.log(err)
+                setLoading(false)
+                setSnackbarSeverity("error")
+                setSnackbarMessage(
+                    "Unfortunately something went wrong, please try to send us a message again."
+                )
+                setSnackbarOpen(true)
+                resetForm()
+            });
     }
 
     const closeBackdrop = () => {
@@ -143,8 +148,8 @@ const ContactForm = () => {
                             label="Message"
                             name="message"
                             multiline
-                            rows="1"
-                            rowsMax="10"
+                            rows="5"
+                            rowsmax="10"
                             placeholder="Type your message here..."
                         />
                         <FormSubmitButton
