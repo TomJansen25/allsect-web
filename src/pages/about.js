@@ -4,7 +4,7 @@ import { Text, ImageCaption } from "../components/slices"
 import styled from "styled-components";
 
 import variables from "../styles/variables"
-import SEO from "../components/layout/seo"
+import Seo from "../components/layout/seo"
 
 const AboutSlices = styled.div`
     display: flex;
@@ -116,7 +116,7 @@ const AboutPage = ({ data }) => {
 export default AboutPage
 
 export const Head = () => (
-    <SEO
+    <Seo
         title="About"
         description="Get to know more about who and what are behind Allsect."
     />

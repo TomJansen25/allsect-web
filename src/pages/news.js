@@ -9,7 +9,7 @@ import {
     DialogTitle
 } from "@mui/material";
 import NewsMasonryGrid from "../components/news/newsMasonryGrid";
-import SEO from "../components/layout/seo";
+import Seo from "../components/layout/seo";
 
 import { ReadMoreWrapper } from "../components/styled"
 
@@ -90,7 +90,7 @@ const NewsPage = ({ data }) => {
 export default NewsPage
 
 export const Head = () => (
-    <SEO
+    <Seo
         title="The latest ento and edible insect news"
         description="All the latest news regarding edible insects and entomophagy collected in one place."
     />

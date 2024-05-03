@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useState } from "react"
 import { graphql } from "gatsby"
 import { ArrowLeftCircle, ArrowRightCircle } from "styled-icons/bootstrap"
 
-import SEO from "../components/layout/seo"
+import Seo from "../components/layout/seo"
 import BlogHeader from "../components/blog/blogHeader"
 import BlogGrid from "../components/blog/blogGrid"
 
@@ -173,7 +173,7 @@ const BlogPage = ({ data }) => {
 export default BlogPage
 
 export const Head = () => (
-    <SEO
+    <Seo
         title="Edible Insect and Entomophagy Blog"
         description="Fun facts, interesting information about entomophagy and edible insects, product tests and reviews, and the latest and coolest brands in the industry can be found here!"
     />

@@ -14,7 +14,7 @@ import styled from "styled-components"
 import { parseDate, readingTime } from "../utils/functions"
 import { structuredBlogPost } from "../utils/structuredData"
 
-import SEO from "../components/layout/seo"
+import Seo from "../components/layout/seo"
 // import Comments from "../components/other/comments"
 
 import {
@@ -232,7 +232,7 @@ export const Head = ({ data }) => {
     const structuredData = structuredBlogPost(data)
 
     return (
-        <SEO
+        <Seo
             title={asText(post.title.richText)}
             description={post.tl_dr}
             keywords={post.keywords_seo}

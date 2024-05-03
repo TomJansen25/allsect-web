@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react"
 import { graphql } from "gatsby"
 
-import SEO from "../components/layout/seo"
+import Seo from "../components/layout/seo"
 import ProductHeader from "../components/product/productHeader"
 import ProductGrid from "../components/product/productGrid"
 
@@ -113,7 +113,7 @@ const ProductPage = ({ data }) => {
 export default ProductPage
 
 export const Head = () => (
-    <SEO
+    <Seo
         title="Edible Insect Products"
         description="Looking for the best edible insect products? Find everything we have tried and recommend here in our products overview."
     />

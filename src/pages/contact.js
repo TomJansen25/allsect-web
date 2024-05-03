@@ -6,7 +6,7 @@ import axios from "axios";
 import styled from "styled-components";
 import { MailSend } from "styled-icons/remix-fill"
 // import { Error } from "styled-icons/material-twotone"
-import SEO from "../components/layout/seo";
+import Seo from "../components/layout/seo";
 import {
     FormPaper,
     ContactFormWrapper,
@@ -183,7 +183,7 @@ const ContactForm = () => {
 export default ContactForm
 
 export const Head = () => (
-    <SEO
+    <Seo
         title="Contact"
         description="Looking for information or do you have something interesting for us? Contact us and let us know."
     />

@@ -8,7 +8,7 @@ import {
     Index
 } from "react-instantsearch-hooks-web";
 
-import SEO from "../components/layout/seo"
+import Seo from "../components/layout/seo"
 import SearchPageBox from "../components/search/searchPageBox"
 import { PoweredBy } from "../components/search/poweredByAlgolia";
 import { BlogPostHit, RecipeHit } from "../components/search/hitComps";
@@ -98,5 +98,5 @@ const SearchPage = (props) => {
 export default SearchPage
 
 export const Head = () => (
-    <SEO title="Search" />
+    <Seo title="Search" />
 )

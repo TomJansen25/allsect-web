@@ -22,7 +22,7 @@ const ReadingProgress = ({ target }) => {
         const totalHeight =
             element.clientHeight - element.offsetTop - window.innerHeight
         const windowScrollTop =
-            window.pageYOffset ||
+            window.scrollY ||
             document.documentElement.scrollTop ||
             document.body.scrollTop ||
             0

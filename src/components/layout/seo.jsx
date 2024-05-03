@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 import { linkResolver } from "../../utils/linkResolver";
 
-const SEO = ({
+const Seo = ({
     description,
     lang,
     // meta,
@@ -63,7 +63,7 @@ const SEO = ({
     )
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
     description: "Welcome to the world of edible insects!",
     lang: "en",
     meta: [],
@@ -72,7 +72,7 @@ SEO.defaultProps = {
     docMeta: { id: "", uid: "", url: "", type: "", lang: "en-au" },
 }
 
-SEO.propTypes = {
+Seo.propTypes = {
     description: PropTypes.string,
     lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
@@ -88,4 +88,4 @@ SEO.propTypes = {
     structuredData: PropTypes.string,
 }
 
-export default SEO
+export default Seo

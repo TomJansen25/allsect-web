@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 
-import SEO from "../components/layout/seo";
+import Seo from "../components/layout/seo";
 import IndexBanner from "../components/other/homeBanner";
 
 import LatestItems from "../components/other/latestItems";
@@ -147,7 +147,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const Head = () => (
-    <SEO
+    <Seo
         title="The Home of Edible Insects"
         description="Interesting blog posts, delicious recipes, the latest news and more about edible insects, entomophopagy and/or insects as food is right here."
     />

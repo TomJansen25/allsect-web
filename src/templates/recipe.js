@@ -13,7 +13,7 @@ import { Grid } from "@mui/material"
 import { Schedule, FiberManualRecord, People } from "styled-icons/material"
 import styled from "styled-components"
 
-import SEO from "../components/layout/seo"
+import Seo from "../components/layout/seo"
 // import Comments from "../components/other/comments"
 
 import {
@@ -206,7 +206,7 @@ export const Head = ({ data }) => {
     const structuredData = structuredRecipe(data)
 
     return (
-        <SEO
+        <Seo
             title={asText(recipe.title.richText)}
             description={asText(recipe.introduction.richText)}
             keywords={recipe.keywords_seo}

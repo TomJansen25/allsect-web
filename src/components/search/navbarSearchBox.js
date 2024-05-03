@@ -4,7 +4,7 @@ import { InputAdornment, TextField } from "@mui/material"
 // import { makeStyles } from "@material-ui/core/styles"
 import { SearchAlt } from "styled-icons/boxicons-regular/"
 import styled from "styled-components"
-import { brandColors } from "../../styles/brandColors"
+// import { brandColors } from "../../styles/brandColors"
 
 const SearchWrapper = styled(TextField)`
     border-radius: 10px;
@@ -13,6 +13,7 @@ const SearchWrapper = styled(TextField)`
     width: auto;
 `
 
+/*
 const SearchIcon = styled.div`
     padding: 0px;
     height: 100%;
@@ -24,7 +25,7 @@ const SearchIcon = styled.div`
     justify-content: center;
 `
 
-/*
+
 const useStyles = makeStyles({
     inputRoot: {
         color: brandColors.darkgrey,

@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from "../components/layout/seo"
+import Seo from "../components/layout/seo"
 
 const NotFoundPage = () => (
     <section>
@@ -10,4 +10,4 @@ const NotFoundPage = () => (
 
 export default NotFoundPage
 
-export const Head = () => (<SEO title="404: Not found" />)
+export const Head = () => (<Seo title="404: Not found" />)

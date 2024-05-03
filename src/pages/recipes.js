@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useState } from "react"
 import { graphql } from "gatsby"
 import { ArrowLeftCircle, ArrowRightCircle } from "styled-icons/bootstrap"
 
-import SEO from "../components/layout/seo"
+import Seo from "../components/layout/seo"
 import RecipeHeader from "../components/recipes/recipeHeader"
 import RecipeGrid from "../components/recipes/recipeGrid"
 
@@ -224,7 +224,7 @@ const RecipesPage = ({ data }) => {
 export default RecipesPage
 
 export const Head = () => (
-    <SEO
+    <Seo
         title="Edible Insect Recipes"
         description="Find the best insect recipes and inspiration to cook with grasshoppers, crickets, mealworms, buffaloworms and more right here."
         keywords={[

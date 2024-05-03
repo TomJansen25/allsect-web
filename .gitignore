@@ -2,6 +2,9 @@
 .firebase/
 allsect-firebase-adminsdk.json
 
+# Notebooks
+notebooks/
+
 # Gatsby develop/build files
 .cache/
 public/
