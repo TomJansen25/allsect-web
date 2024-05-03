@@ -28,12 +28,12 @@ const AppbarWrapper = styled.div`
         0px 4px 5px 0px rgba(0, 0, 0, 0.14),
         0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 
-    @media (max-width: ${variables.maxWidthSM}) {
+    @media (max-width: 1500px) {
         padding-left: 5vw;
         padding-right: 5vw;
     }
 
-    @media (min-width: ${variables.minWidthSM}) {
+    @media (min-width: 1500px) {
         padding-left: 10vw;
         padding-right: 10vw;
     }
@@ -65,12 +65,12 @@ const NavbarButton = styled(RegularButton)`
         text-decoration-thickness: 2.5px;
     }
 
-    @media (min-width: 1450px) {
+    @media (min-width: ${variables.muiLGwidth}) {
         margin-right: 15px;
         letter-spacing: 0.15rem;
     }
 
-    @media (max-width: 1450px) {
+    @media (max-width: ${variables.muiLGwidth}) {
         margin-right: 8px;
         letter-spacing: 0.1rem;
     }
@@ -78,13 +78,13 @@ const NavbarButton = styled(RegularButton)`
 
 const NavbarButtons = styled.div`
     display: flex;
-    @media (max-width: 1450px) {
+    @media (max-width: ${variables.muiLGwidth}) {
         display: none;
     }
 `
 
 const NavbarToggle = styled(IconButton)`
-    @media (min-width: 1450px) {
+    @media (min-width: ${variables.muiLGwidth}) {
         display: none;
     }
 
